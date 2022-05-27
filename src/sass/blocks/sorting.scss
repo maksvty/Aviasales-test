@@ -1,0 +1,43 @@
+.sorting {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.sorting__group {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.sorting__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  min-height: 50px;
+  width: 50%;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+
+  background-color: #ffffff;
+
+  &--cost {
+    border-radius: 5px 0 0 5px;
+  }
+
+  &--speed {
+    border-radius: 0 5px 5px 0;
+  }
+
+  &--active {
+    background-color: #2196F3;
+    color: #ffffff;
+  }
+}

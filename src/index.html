@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page__body">
+    <header class="page-header">
+        <img class="page-header__logo" src="image/logo.svg" alt="Логотип aviasales">
+    </header>
+    <main class="page-main">
+        <section tabindex="1">
+            <h1 class="visually-hidden">Страница выбора билета с возможностью фильтрации и сортировки</h1>
+            <div class="page-main__container">
+                <section class="filter page-main__left-column" >
+                    <h2 class="filter__title">Количество пересадок</h2>
+                    <form class="filter__form" action="#" autocomplete="off">
+                        <fieldset class="filter__group">
+                            <label class="filter__label">
+                                <input class="filter__checkbox filter__checkbox--all visually-hidden" type="checkbox" name="transfers" value="all" id="filter-all">
+                                <span class="filter__label--checkbox"></span>
+                                Все
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox filter__checkbox--transfer visually-hidden" type="checkbox" name="transfers" value="0" id="filter-zero">
+                                <span class="filter__label--checkbox"></span>
+                                Без пересадок
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox filter__checkbox--transfer visually-hidden" type="checkbox" name="transfers" value="1" id="filter-one">
+                                <span class="filter__label--checkbox"></span>
+                                1 пересадка
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox filter__checkbox--transfer visually-hidden" type="checkbox" name="transfers" value="2" id="filter-two">
+                                <span class="filter__label--checkbox"></span>
+                                2 пересадки
+                            </label>
+                            <label class="filter__label">
+                                <input class="filter__checkbox filter__checkbox--transfer visually-hidden" type="checkbox" name="transfers" value="3" id="filter-three">
+                                <span class="filter__label--checkbox"></span>
+                                3 пересадки
+                            </label>
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="sorting">
+                    <h2 class="visually-hidden">Сортировка</h2>
+                    <form class="sorting__form" action="#">
+                        <fieldset class="sorting__group">
+                            <label class="sorting__label sorting__label--cost sorting__label--active">
+                                <input class="sorting__radio visually-hidden" type="radio" name="sorting" value="cost" checked>
+                                Самый дешевый
+                            </label>
+                            <label class="sorting__label sorting__label--speed">
+                                <input class="sorting__radio visually-hidden" type="radio" name="sorting" value="speed">
+                                Самый быстрый
+                            </label>
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="tickets">
+                    <h2 class="visually-hidden">Список билетов</h2>
+                </section>
+            </div>
+        </section>
+    </main>
+    <template id="ticket">
+        <div class="ticket">
+            <header class="ticket__header">
+                <p class="ticket__price">13400</p>
+                <img class="ticket__airline-logo" src="http://pics.avs.io/99/36/SU.png" alt="Логотип" width="110" height="36">
+            </header>
+            <div class="ticket__layout-row">
+                <div>
+                    <p class="ticket__cities ticket__label">MOW - HKT</p>
+                    <p class="ticket__time ticket__text">10:45 - 08:00</p>
+                </div>
+                <div>
+                    <p class="ticket__label">В пути</p>
+                    <p class="ticket__travel-time ticket__text">21ч 15м</p>
+                </div>
+                <div>
+                    <p class="ticket__transfer ticket__label">2 пересадки</p>
+                    <p class="ticket__transfer-cities ticket__text">HKG, JNB</p>
+                </div>
+                <div>
+                    <p class="ticket__cities ticket__label">MOW - HKT</p>
+                    <p class="ticket__time ticket__text">10:45 - 08:00</p>
+                </div>
+                <div>
+                    <p class="ticket__label">В пути</p>
+                    <p class="ticket__travel-time ticket__text">21ч 15м</p>
+                </div>
+                <div>
+                    <p class="ticket__transfer ticket__label">2 пересадки</p>
+                    <p class="ticket__transfer-cities ticket__text">HKG, JNB</p>
+                </div>
+        </div>
+    </template>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
