@@ -1,12 +1,11 @@
-const API_URL = 'http://localhost:3000/tickets';
+const instance = axios.create({
+    withCredentials: true,
+    baseURL: 'http://localhost:3000/'
+})
 
-export const getData = (onSuccess, onFail) => {
-    fetch(API_URL)
-        .then((response) => response.json())
-        .then((data) => {
-            onSuccess(data);
+export const getData = (onSuccess) => {
+    instance.get('tickets')
+        .then((responce) => {
+            onSuccess(responce.data);
         })
-        .catch(() => {
-            onFail();
-        });
 };
